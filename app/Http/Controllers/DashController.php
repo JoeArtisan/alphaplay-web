@@ -25,8 +25,9 @@ class DashController extends Controller
     public function data(Request $request)
     {
         
-        $id = 4213; // first 4213 07/05/1996 - last 6625 2/11/2021, 
-        $this->getChances($id);
+        $id = 6460; // first 4213 07/05/1996 - last 6627 09/11/2021, 
+        
+        //$this->getChances($id);
 
         $fates = Fate::all();
         echo($fates);
@@ -76,6 +77,22 @@ class DashController extends Controller
             $loteria_page_data[] = $loteria_page[$i]['premios'][0]['numero'];
         }
 
+        $exist = Fate::where('fate_id', $chances_last['numeroSorteo'])->first();
+        $isValid = !$exist && count($chances_last['premios']) > 0;
+
+        if ($isValid) {
+            Fate::create([
+                'fate_id' => $chances_last['numeroSorteo'],
+                'role' => 1,
+                'award' => $chances_last['premios'][0]['numero'],
+                'serie' => $chances_last['premios'][0]['serie'],
+                'release' => $chances_last['fecha'],
+                'validity' => $chances_last['vigencia'],
+            ]);
+        }
+
+        $frelease = Fate::where('fate_id',4213)->first()->release;
+
         $data = [
             'chances' => [
                 'last' => $chances_last,
@@ -83,7 +100,11 @@ class DashController extends Controller
                     'label' => $chances_page_label,
                     'data' => $chances_page_data,
                 ],
+                'count' => Fate::where('role',1)->get()->count(),
+                'first' => $frelease,
+                'age' => $frelease->age,
             ],
+
             'loteria' => [
                 'last' => $loteria_last,
                 'page' => [

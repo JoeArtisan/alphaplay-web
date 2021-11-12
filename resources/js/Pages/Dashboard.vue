@@ -8,12 +8,12 @@
                     <div class="w-full">
                         <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row">
                             <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                                <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal" v-on:click="toggleTabs(1)" v-bind:class="{'text-emerald-600 bg-white': openTab !== 1, 'text-green-500 bg-emerald-600': openTab === 1}">
+                                <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal" v-on:click="toggleTabs(1)" v-bind:class="{'text-gray-600 bg-white': openTab !== 1, 'text-green-500 bg-gray-100': openTab === 1}">
                                     Loteria
                                 </a>
                             </li>
                             <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                                <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal" v-on:click="toggleTabs(2)" v-bind:class="{'text-emerald-600 bg-white': openTab !== 2, 'text-green-500 bg-emerald-600': openTab === 2}">
+                                <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal" v-on:click="toggleTabs(2)" v-bind:class="{'text-gray-600 bg-white': openTab !== 2, 'text-green-500 bg-gray-100': openTab === 2}">
                                     Chances
                                 </a>
                             </li>
@@ -66,6 +66,19 @@
 
                                         <div class="p-6 border-t border-gray-200 md:border-l">
                                             <LineChart title="Últimos 7 sorteos chances" :data="data.chances.page.data" :labels="data.chances.page.label"/>
+                                        </div>
+
+                                        <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
+                                            <div class="flex items-center">
+                                                <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Analisis historico de los chances</div>
+                                            </div>
+
+                                            <div class="ml-12">
+                                                <div class="mt-2 text-sm text-gray-500">
+                                                    Se han contabilizado {{data.chances.count}} sorteos desde el {{ getDate(data.chances.first) }} y tenemos mas de {{data.chances.age}} años de informacion.<br>
+                                                     <br>
+                                                </div>
+                                            </div>
                                         </div>
                             
                                     </div>

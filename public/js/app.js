@@ -24291,6 +24291,39 @@ var _hoisted_30 = /*#__PURE__*/_withScopeId(function () {
 var _hoisted_31 = {
   "class": "p-6 border-t border-gray-200 md:border-l"
 };
+var _hoisted_32 = {
+  "class": "p-6 border-t border-gray-200 md:border-t-0 md:border-l"
+};
+
+var _hoisted_33 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "flex items-center"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "ml-4 text-lg text-gray-600 leading-7 font-semibold"
+  }, "Analisis historico de los chances")], -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_34 = {
+  "class": "ml-12"
+};
+var _hoisted_35 = {
+  "class": "mt-2 text-sm text-gray-500"
+};
+
+var _hoisted_36 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_37 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
+  /* HOISTED */
+  );
+});
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_LineChart = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LineChart");
 
@@ -24302,8 +24335,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
         "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal", {
-          'text-emerald-600 bg-white': _ctx.openTab !== 1,
-          'text-green-500 bg-emerald-600': _ctx.openTab === 1
+          'text-gray-600 bg-white': _ctx.openTab !== 1,
+          'text-green-500 bg-gray-100': _ctx.openTab === 1
         }]),
         onClick: _cache[0] || (_cache[0] = function ($event) {
           return _ctx.toggleTabs(1);
@@ -24312,8 +24345,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       /* CLASS */
       )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
         "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal", {
-          'text-emerald-600 bg-white': _ctx.openTab !== 2,
-          'text-green-500 bg-emerald-600': _ctx.openTab === 2
+          'text-gray-600 bg-white': _ctx.openTab !== 2,
+          'text-green-500 bg-gray-100': _ctx.openTab === 2
         }]),
         onClick: _cache[1] || (_cache[1] = function ($event) {
           return _ctx.toggleTabs(2);
@@ -24368,7 +24401,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         labels: _ctx.data.chances.page.label
       }, null, 8
       /* PROPS */
-      , ["data", "labels"])])], 2
+      , ["data", "labels"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [_hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Se han contabilizado " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.chances.count) + " sorteos desde el " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.getDate(_ctx.data.chances.first)) + " y tenemos mas de " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.chances.age) + " años de informacion.", 1
+      /* TEXT */
+      ), _hoisted_36, _hoisted_37])])])], 2
       /* CLASS */
       )])])])])])])])];
     }),
