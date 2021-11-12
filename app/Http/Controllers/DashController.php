@@ -18,12 +18,18 @@ class DashController extends Controller
     public function welcome(Request $request)
     {
         if ($request->user()) return redirect()->route('dashboard');
+
+        return Inertia::render('Welcome');
+    }
+
+    public function data(Request $request)
+    {
         
-        /* $id = 4513; // first 4213 07/05/1996 - last 6625 2/11/2021, 
+        $id = 4810; // first 4213 07/05/1996 - last 6625 2/11/2021, 
         $this->getChances($id);
 
         $fates = Fate::all();
-        dd($fates); */
+        echo($fates);
 
         return Inertia::render('Welcome');
     }

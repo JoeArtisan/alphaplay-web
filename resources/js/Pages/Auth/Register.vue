@@ -10,10 +10,6 @@
 
         <form @submit.prevent="submit">
             <div>
-                <jet-label for="cr_id" value="Numero de Cédula" />
-                <jet-input id="cr_id" type="text" class="mt-1 block w-full" v-model="form.cr_id" required autofocus autocomplete="cr_id" />
-            </div>
-            <div>
                 <jet-label for="name" value="Nombre Completo" />
                 <jet-input id="name" type="text" class="mt-1 block w-full" v-model="form.name" required autofocus autocomplete="name" />
             </div>
