@@ -25,7 +25,7 @@ class DashController extends Controller
     public function data(Request $request)
     {
         
-        $id = 4810; // first 4213 07/05/1996 - last 6625 2/11/2021, 
+        $id = 4213; // first 4213 07/05/1996 - last 6625 2/11/2021, 
         $this->getChances($id);
 
         $fates = Fate::all();
@@ -98,7 +98,7 @@ class DashController extends Controller
     }
 
     public function getChances(Int $id){
-        $to = $id + 100;
+        $to = $id + 200;
         for ($i = $id; $i <= $to; $i++) { 
             $this->getChancesData($i);
         }
