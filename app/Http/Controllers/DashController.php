@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Client\Pool;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -92,6 +93,41 @@ class DashController extends Controller
         }
 
         $frelease = Fate::where('fate_id',4213)->first()->release;
+        
+        $top7_frecuency_all_chances = DB::table('fates')
+                 ->select('award', DB::raw('count(award) as total'))
+                 ->where('role',1)
+                 ->groupBy('award')
+                 ->orderBy('total','DESC')
+                 ->take(7)
+                 ->get();
+
+        $top7_frecuency_all_chances_label = [];
+        $top7_frecuency_all_chances_data = [];
+
+        foreach ($top7_frecuency_all_chances as $f) {
+            $top7_frecuency_all_chances_label[] = $f->award;
+            $top7_frecuency_all_chances_data[] = $f->total;
+        }
+
+
+        $top7_frecuency_10y_chances = DB::table('fates')
+                 ->select('award', DB::raw('count(award) as total'))
+                 ->where('role',1)
+                 ->whereDate('release','>=','2011-10-01')
+                 ->groupBy('award')
+                 ->orderBy('total','DESC')
+                 ->take(7)
+                 ->get();
+
+        $top7_frecuency_10y_chances_label = [];
+        $top7_frecuency_10y_chances_data = [];
+
+        foreach ($top7_frecuency_10y_chances as $f) {
+            $top7_frecuency_10y_chances_label[] = $f->award;
+            $top7_frecuency_10y_chances_data[] = $f->total;
+        }
+
 
         $data = [
             'chances' => [
@@ -103,6 +139,14 @@ class DashController extends Controller
                 'count' => Fate::where('role',1)->get()->count(),
                 'first' => $frelease,
                 'age' => $frelease->age,
+                'top7_frecuency_all' => [
+                    'label' => $top7_frecuency_all_chances_label,
+                    'data' => $top7_frecuency_all_chances_data,
+                ],
+                'top7_frecuency_10y' => [
+                    'label' => $top7_frecuency_10y_chances_label,
+                    'data' => $top7_frecuency_10y_chances_data,
+                ],
             ],
 
             'loteria' => [

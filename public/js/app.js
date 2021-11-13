@@ -20566,7 +20566,7 @@ __webpack_require__.r(__webpack_exports__);
           labels: this.labels,
           datasets: [{
             label: "1er Premio",
-            type: "line",
+            type: "bar",
             data: this.data,
             backgroundColor: "#0b7585",
             borderColor: "#0d8b9e",
@@ -24183,7 +24183,7 @@ var _hoisted_12 = /*#__PURE__*/_withScopeId(function () {
     src: "https://www2.jps.go.cr/wp-content/uploads/2021/04/logo_nacional.png"
   }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "ml-4 text-lg text-gray-600 leading-7 font-semibold"
-  }, "Último Sorteo Loteria")], -1
+  }, "Último Sorteo Lotería")], -1
   /* HOISTED */
   );
 });
@@ -24300,7 +24300,7 @@ var _hoisted_33 = /*#__PURE__*/_withScopeId(function () {
     "class": "flex items-center"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "ml-4 text-lg text-gray-600 leading-7 font-semibold"
-  }, "Analisis historico de los chances")], -1
+  }, "Análisis histórico de los chances")], -1
   /* HOISTED */
   );
 });
@@ -24324,8 +24324,22 @@ var _hoisted_37 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
+var _hoisted_38 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_39 = {
+  "class": "p-6 border-t border-gray-200 md:border-l"
+};
+var _hoisted_40 = {
+  "class": "p-6 border-t border-gray-200 md:border-l"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_LineChart = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LineChart");
+
+  var _component_BarChart = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("BarChart");
 
   var _component_app_layout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("app-layout");
 
@@ -24336,17 +24350,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
         "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal", {
           'text-gray-600 bg-white': _ctx.openTab !== 1,
-          'text-green-500 bg-gray-100': _ctx.openTab === 1
+          'text-green-500 bg-gray-200': _ctx.openTab === 1
         }]),
         onClick: _cache[0] || (_cache[0] = function ($event) {
           return _ctx.toggleTabs(1);
         })
-      }, " Loteria ", 2
+      }, " Lotería ", 2
       /* CLASS */
       )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
         "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal", {
           'text-gray-600 bg-white': _ctx.openTab !== 2,
-          'text-green-500 bg-gray-100': _ctx.openTab === 2
+          'text-green-500 bg-gray-200': _ctx.openTab === 2
         }]),
         onClick: _cache[1] || (_cache[1] = function ($event) {
           return _ctx.toggleTabs(2);
@@ -24362,7 +24376,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       /* TEXT */
       ), _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Fecha: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.getDate(_ctx.data.loteria.last.fecha)) + " ", 1
       /* TEXT */
-      ), _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Vigencia: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.getDate(_ctx.data.loteria.last.vigencia)) + " ", 1
+      ), _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Validez: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.getDate(_ctx.data.loteria.last.vigencia)) + " ", 1
       /* TEXT */
       ), _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Primer premio: num " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.loteria.last.premios[0].numero) + " serie " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.loteria.last.premios[0].serie), 1
       /* TEXT */
@@ -24371,7 +24385,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       ), _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Tercer premio: num " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.loteria.last.premios[2].numero) + " serie " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.loteria.last.premios[2].serie), 1
       /* TEXT */
       ), _hoisted_20])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LineChart, {
-        title: "Últimos 7 sorteos loteria",
+        title: "Últimos 7 sorteos lotería",
         data: _ctx.data.loteria.page.data,
         labels: _ctx.data.loteria.page.label
       }, null, 8
@@ -24387,7 +24401,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       /* TEXT */
       ), _hoisted_26, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Fecha: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.getDate(_ctx.data.chances.last.fecha)) + " ", 1
       /* TEXT */
-      ), _hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Vigencia: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.getDate(_ctx.data.chances.last.vigencia)) + " ", 1
+      ), _hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Validez: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.getDate(_ctx.data.chances.last.vigencia)) + " ", 1
       /* TEXT */
       ), _hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Primer premio: num " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.chances.last.premios[0].numero) + " serie " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.chances.last.premios[0].serie), 1
       /* TEXT */
@@ -24401,9 +24415,25 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         labels: _ctx.data.chances.page.label
       }, null, 8
       /* PROPS */
-      , ["data", "labels"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [_hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Se han contabilizado " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.chances.count) + " sorteos desde el " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.getDate(_ctx.data.chances.first)) + " y tenemos mas de " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.chances.age) + " años de informacion.", 1
+      , ["data", "labels"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [_hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Se han contado " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.chances.count) + " sorteos desde el " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.getDate(_ctx.data.chances.first)) + " y tenemos más de " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.chances.age) + " años de información.", 1
       /* TEXT */
-      ), _hoisted_36, _hoisted_37])])])], 2
+      ), _hoisted_36, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" El numero más frecuente es el " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.chances.top7_frecuency_all.data[0]) + " con " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.chances.top7_frecuency_all.label[0]) + " ocasiones. ", 1
+      /* TEXT */
+      ), _hoisted_37, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" El numero más frecuente de los ultimos 10 años el " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.chances.top7_frecuency_10y.data[0]) + " con " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.data.chances.top7_frecuency_10y.label[0]) + " ocasiones. ", 1
+      /* TEXT */
+      ), _hoisted_38])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BarChart, {
+        title: 'Los 7 más frecuentes de los ultimos 10 años',
+        data: _ctx.data.chances.top7_frecuency_10y.data,
+        labels: _ctx.data.chances.top7_frecuency_10y.label
+      }, null, 8
+      /* PROPS */
+      , ["data", "labels"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BarChart, {
+        title: 'Los 7 más frecuentes de los ultimos ' + _ctx.data.chances.age + ' años',
+        data: _ctx.data.chances.top7_frecuency_all.data,
+        labels: _ctx.data.chances.top7_frecuency_all.label
+      }, null, 8
+      /* PROPS */
+      , ["title", "data", "labels"])])], 2
       /* CLASS */
       )])])])])])])])];
     }),

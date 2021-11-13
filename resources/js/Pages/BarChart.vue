@@ -33,7 +33,7 @@ import { defineComponent } from 'vue'
               datasets: [
                 {
                   label: "1er Premio",
-                  type: "line",
+                  type: "bar",
                   data: this.data,
                   backgroundColor: "#0b7585",
                   borderColor: "#0d8b9e",
